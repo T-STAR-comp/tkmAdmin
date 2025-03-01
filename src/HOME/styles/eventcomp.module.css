@@ -1,0 +1,210 @@
+.main_div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(33, 33, 92);
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.26);
+    margin: 2%;
+}
+.text_holder_div{
+    display: flex;
+    flex-direction: row;
+}
+.event_name{
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(223, 223, 223);
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.219);
+    font-weight: bolder;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.edit_event_btn{
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    text-decoration: underline;
+    transition-duration: 0.12s;
+}
+.edit_event_btn:hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.edit_event_btn:active{
+    color: white;
+}
+
+
+
+.detailsl_main_cont{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 5px rgba(255, 255, 255, 0.123);
+}
+.manage_event_hd_txt{
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+.inactive_icon{
+    width: fit-content;
+    position: absolute;
+    right: 25%;
+    cursor: pointer;
+}
+.inactive_icon:active{
+    transform: scale(1.1);
+}
+.active_icon{
+    width: fit-content;
+    position: absolute;
+    right: 20%;
+    cursor: pointer;
+}
+.active_icon:active{
+    transform: scale(1.1);
+}
+.status_check{
+    width: fit-content;
+    position: absolute;
+    right: 15%;
+}
+.close_svg{
+    margin-left: 95%;
+    margin-top: -3.5%;
+    cursor: pointer;
+}
+.manage_event_main{
+    display: flex;
+    flex-direction: row;
+}
+.manage_ev_left_div{
+    background-color: rgba(180, 180, 180, 0.288);
+    backdrop-filter: blur(18px);
+    padding: 2%;
+    width: 35vh;
+    border-radius: 10px;
+}
+img{
+    border-radius: 10px;
+}
+.manage_ev_date{
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.541);
+}
+.settings_icon{
+    margin-left: 4%;
+    margin-top: 5%;
+    cursor: pointer;
+    width: fit-content;
+    transition-duration: 0.22s;
+}
+.settings_icon:hover{
+    transform: scale(1.2);
+}
+
+.manage_ev_right_div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(180, 180, 180, 0.288);
+    backdrop-filter: blur(18px);
+    padding: 0 1%;
+    margin-left: 4%;
+    border-radius: 10px;
+    width: 120vh;
+}
+.fincnial_div_hd_txt{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(211, 211, 211);
+}
+.total_txts{
+    display: flex;
+    flex: row;
+    font-size: 1.6em;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(230, 230, 230);
+    margin-left: 5%;
+    background-color: rgba(179, 179, 179, 0.116);
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.034);
+    text-wrap: nowrap;
+    width: 80%;
+    padding: 2%;
+    border-radius: 10px;
+}
+.green_txt{
+    color: rgb(0, 226, 0);
+    margin-left: 7px;
+    margin-top: 0;
+}
+.download_icon{
+    margin-left: 4%;
+    margin-top: -6%;
+    cursor: pointer;
+    width: fit-content;
+    transition-duration: 0.22s;
+}
+.loader {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-wrap: nowrap;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    left: 40%;
+    bottom: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.loader div {
+    width: 43px;
+    height: 43px;
+    margin: 1px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader div:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    } 
+    40% {
+        transform: scale(1.0);
+    }
+}
+.editpencil{
+    cursor: pointer;
+}
+.close_editmode{
+    display: flex;
+    z-index: 999;
+    cursor: pointer;
+    max-width: fit-content;
+}

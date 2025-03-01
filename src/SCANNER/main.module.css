@@ -1,0 +1,180 @@
+.head_txt{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
+.vid_stream_prev{
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.093);
+}
+.first_btns_style{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.093);
+    padding: 3%;
+}
+.start_btn{
+    font-size: 1.2em;
+    color: blue;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4% 5%;
+    border: none;
+    border-radius: 6px;
+    width: auto;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.start_btn:active{
+    background-color: grey;
+}
+.logout_btn{
+    font-size: 1.2em;
+    color: white;
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4% 7%;
+    border: none;
+    border-radius: 6px;
+    width: auto;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.logout_btn:active{
+    background-color: rgb(165, 128, 128);
+}
+.close_btn{
+    font-size: 1.2em;
+    color: white;
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4% 4%;
+    border: none;
+    border-radius: 6px;
+    margin-left: 4%;
+}
+.close_btn:active{
+    background-color: rgb(179, 115, 115);
+}
+.scan_btn{
+    font-size: 1.2em;
+    color: white;
+    background-color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4% 5%;
+    border: none;
+    border-radius: 6px;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+.scan_btn:active{
+    background-color: rgb(91, 91, 175);
+}
+.null_{
+    display: none;
+    visibility: hidden;
+}
+.dataDisp{
+    background-color: rgba(174, 173, 173, 0.333);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    text-shadow:  0 1px 1px rgb(105, 105, 105);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 5px rgba(128, 128, 128, 0.175);
+    margin: 2%;
+}
+.scannedState{
+    color: rgb(6, 220, 6);
+}
+.status_icons{
+    position: fixed;
+    left: 40%;
+    right: 40%;
+}
+.status_txt{
+    position: fixed;
+    left: 35%;
+    right: 35%;
+    bottom: 40%;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: grey;
+    text-wrap: nowrap;
+    background-color: rgba(203, 203, 203, 0.9);
+    border-radius: 9px;
+}
+.manualscan_cont{
+    background-color: rgba(128, 128, 128, 0.551);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6%;
+}
+.manual_input{
+    text-align: center;
+    margin: 6%;
+    padding: 2% 15%;
+    border: none;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.manual_verify_btn{
+    margin-bottom: 6%;
+    padding: 2% 8%;
+    border: none;
+    border-radius: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blue;
+    color: white;
+}
+.manual_verify_btn:active{
+    background-color: rgb(189, 189, 189);
+    color: blue;
+}
+.manual_cancel_btn{
+    margin-bottom: 6%;
+    padding: 2% 8%;
+    border: none;
+    border-radius: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: red;
+    color: white;
+}
+.manual_cancel_btn:active{
+    background-color: rgb(189, 189, 189);
+    color: red;
+}
+.Message_style{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: grey;
+    padding: 2%;
+    border: none;
+    border-radius: 4px;
+}
+.autoscan_msg{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 0.9rem;
+    color: blue;
+  }
+  
+  .footer .brand {
+    font-weight: bold;
+    color: blue;
+  }
+  

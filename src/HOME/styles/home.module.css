@@ -1,0 +1,132 @@
+body{
+    background-color: rgba(128, 128, 128, 0.336);
+}
+
+.head_bar_cont{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(128, 128, 128, 0.445);
+    position: relative;
+    margin: -10px;
+    padding: 1%;
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.158);
+}
+.text1_{
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: blue;
+    margin-bottom: 0;
+    text-shadow: 0 4px 5px rgba(102, 102, 102, 0.281);
+}
+.text2_{
+    font-size: 1.7em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: rgb(33, 33, 92);
+    margin-top: 0;
+}
+.settings_home{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 30%;
+    top: 10%;
+}
+.verifyBnt{
+    margin-top: 1%;
+    margin-right: 4%;
+    color: white;
+    background-color: #255290;
+    border: 1px solid black ;
+}
+.verifyBnt:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+.verifyBnt:active{
+    background-color: rgb(179, 179, 224);
+}
+.header_icons{
+    margin-left: 20%;
+    cursor: pointer;
+}
+.header_icons:active{
+    transform: scale(1.15);
+}
+.text_div{
+    background-color: rgba(185, 185, 185, 0.055);
+    width: 20%;
+    padding: 1%;
+    border-radius: 10%;
+    border: none;
+    text-shadow: 0 4px 5px rgba(102, 102, 102, 0.281);
+}
+.serach_input{
+    text-align: center;
+    padding: 1% 15%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.616);
+}
+
+.Extra_divs{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.states_div{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+
+
+/*.main_div{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(33, 33, 92);
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.26);
+    width: 40%;
+    margin: 2%;
+}
+.event_name{
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(223, 223, 223);
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.219);
+    font-weight: bolder;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.edit_event_btn{
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    text-decoration: underline;
+    transition-duration: 0.12s;
+}
+.edit_event_btn:hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 8px;
+    padding: 1px;
+}
+.edit_event_btn:active{
+    color: white;
+}
+*/

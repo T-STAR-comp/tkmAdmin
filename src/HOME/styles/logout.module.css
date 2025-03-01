@@ -1,0 +1,56 @@
+.main_cont{
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(18px);
+    animation: mainCont ease-in 0.4s;
+}
+@keyframes mainCont {
+    0%{
+        backdrop-filter: blur(0);
+    }
+    100%{
+        backdrop-filter: blur(18px);
+    }
+}
+.container{
+    background-color: rgba(128, 128, 128, 0.315);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.178);
+    animation: inContainer ease-in 0.99s;
+}
+@keyframes inContainer {
+    0%{
+        margin-top: -100%;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+.query_{
+    margin-top: 15%;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.logOut_btns{
+    margin-left: 4%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.144);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1% 2%;
+    cursor: pointer;
+    transition-duration: 0.22s;
+}
+.logOut_btns:hover{
+    background-color: blue;
+}
+.logOut_btns:active{
+    background-color: rgb(146, 146, 255);
+}

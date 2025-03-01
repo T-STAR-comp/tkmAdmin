@@ -1,0 +1,62 @@
+.main_cont{
+    text-align: center;
+    margin: 25% auto;
+    max-width: fit-content;
+    background-color: rgba(128, 128, 128, 0.068);
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.144);
+    padding: 2% 5%;
+    border: none;
+    border-radius: 15px;
+}
+.main_txt{
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: blue;
+}
+.input_field{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2%;
+    width: 90%;
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.116);
+    border: none;
+    border-radius: 4px;
+    margin-top: 3%;
+}
+.login_btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.15em;
+    margin: 4% 0;
+    padding: 2% 15%;
+    transition-duration: 0.25s;
+}
+.login_btn:active{
+    background-color: rgb(112, 112, 112);
+}
+.login_btn:hover{
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.116);
+    color: blue;   
+}
+.link_txt{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+.link_txt:hover{
+    color: red;
+    cursor: pointer;
+}
+.link_txt:active{
+    color: blue;
+}
+.cam_txt_btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: grey;
+}
