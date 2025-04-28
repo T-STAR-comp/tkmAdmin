@@ -109,15 +109,17 @@ function Home () {
             const data = await res.json();
 
             if(data){
-                SetEvents(data);
+                if (data.state != 'none') {
+                    SetEvents(data);
+                }
             };
 
         }
         catch(err){
             if(err){
                 window.alert(err);
-            }
-        }
+            };
+        };
     };
     
     useEffect(() => {
@@ -182,7 +184,7 @@ function Home () {
                 />
             </div>
 
-            {Events.map((Event) => (
+            {Events? Events.map((Event) => (
                 <EventComp
                     ID= {Event.id}
                     EVENTNAME= {Event.EventName}
@@ -193,7 +195,7 @@ function Home () {
                     EVENTSATATUS= {Event.Status}
                 />
                 
-            ))}
+            )) : null}
             
         </div>
     );

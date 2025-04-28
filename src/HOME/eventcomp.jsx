@@ -117,8 +117,8 @@ function EventComp (props) {
 
             const data = await res.json();
             if(data.status === "ok"){
+                SetLoading(false);
                 location.reload();
-                
             }
         }
         catch(err){

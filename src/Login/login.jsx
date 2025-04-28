@@ -67,6 +67,7 @@ function Login() {
         }
         catch(err){
             window.alert("Internal Error Occured please contact Devs");
+            console.log(err)
         }
     }
 
