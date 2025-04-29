@@ -24,8 +24,8 @@ const State = (props) => {
                     body: JSON.stringify(info),
                 });
                 const data = await res.json();
-
-                if(data.message === 'ok'){
+                
+                if(data.status === 'ok'){
                     window.alert('Landing page active');
                 }
             }

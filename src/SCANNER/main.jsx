@@ -37,20 +37,44 @@ const CameraApp = () => {
   // Function to open the camera
   const openCamera = async () => {
     try {
-      SetStreamStyle({visibility:'visible'});
-      const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+      SetStreamStyle({ visibility: 'visible' });
+  
+      const constraints = {
+        video: {
+          facingMode: { exact: "environment" } // Prefer rear camera
+        },
+        audio: false
+      };
+  
+      const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+  
       if (videoRef.current) {
         videoRef.current.srcObject = mediaStream;
         videoRef.current.play();
         setStream(mediaStream);
         setIsCameraOn(true);
-        requestAnimationFrame(scanQRCode); // Start scanning for QR codes
+        requestAnimationFrame(scanQRCode);
       }
     } catch (err) {
-      console.error("Error accessing camera:", err);
-      alert("Could not access the camera. Please check permissions.");
+      console.error("Error accessing rear camera:", err);
+      alert("Could not access the rear camera. Falling back to default camera.");
+      
+      // Optional fallback: try default camera
+      try {
+        const fallbackStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        if (videoRef.current) {
+          videoRef.current.srcObject = fallbackStream;
+          videoRef.current.play();
+          setStream(fallbackStream);
+          setIsCameraOn(true);
+          requestAnimationFrame(scanQRCode);
+        }
+      } catch (fallbackErr) {
+        console.error("Fallback failed:", fallbackErr);
+      }
     }
   };
+  
 
   const ExitMsg = () => {
     SetManualScanMsg('');
@@ -157,10 +181,12 @@ const CameraApp = () => {
         const code = jsQR(imageData.data, canvas.width, canvas.height);
 
         if (code) {
+          console.log(code.data)
           setQrData(code.data); // Set QR code data
           const uid = code.data;
           AutoVerifyData(uid);
         } else {
+          window.alert('no data')
           setQrData(null); // Reset QR data if no code is found
         }
       }
@@ -268,7 +294,7 @@ const CameraApp = () => {
         setMnulMsgStyle({ color: 'red' });
         SetManualTKData('');
       } else {
-        //console.error(err);
+        console.error(err);
         window.alert(err);
       }
     }
