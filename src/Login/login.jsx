@@ -84,7 +84,7 @@ function Login() {
             <p className={styles.main_txt}>ADMIN LOGIN</p>
             <input
                 className={styles.input_field}
-                type="text"
+                type="password"
                 placeholder="Enter PTN Code"
                 minLength="0"
                 maxLength="5"
@@ -101,7 +101,7 @@ function Login() {
                 value={password}
                 onChange={handlePasswordChange}
             />
-            
+
             <button className={styles.login_btn} onClick={sendData} >Login</button>
             
             <Outlet/>
