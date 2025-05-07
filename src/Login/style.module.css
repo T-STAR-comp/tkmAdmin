@@ -60,3 +60,9 @@
     font-weight: bold;
     color: grey;
 }
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}

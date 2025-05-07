@@ -94,15 +94,14 @@ function Login() {
             />
             <input
                 className={styles.input_field}
-                type="text"
+                type="password"
                 placeholder="Enter Password"
                 required
                 minLength="0"
                 value={password}
                 onChange={handlePasswordChange}
             />
-
-            <p className={styles.cam_txt_btn}>Launch Scanner <input onChange={handleOptionChange} checked={selectedOption === 'SCANTICKETS006'} type='radio' value='SCANTICKETS006'/></p>
+            
             <button className={styles.login_btn} onClick={sendData} >Login</button>
             
             <Outlet/>
