@@ -5,6 +5,7 @@ import LOG_OUT from './logout.jsx';
 import CreateEvent from './createEvent.jsx';
 import State from './state.jsx';
 import Console from './console.jsx';
+import CreateUser from './createUser.jsx';
 import url from '../URL/url.js';
 
 function Home () {
@@ -18,7 +19,7 @@ function Home () {
     const[stateon, setStateon] = useState({display:'flex'});
     const[console, Setconsole] = useState({display:'none'});
     const[loggingout, Setloggingout] = useState(false);
-    
+    const[Createuser, SetCreateuser] = useState({display:'flex'});
     const handleChange = (e) => {
         const {value} = e.target;
         setPin(value);
@@ -151,6 +152,12 @@ function Home () {
                 />
             </div>
 
+            <div style={Createuser} className={styles.Extra_divs}>
+                <CreateUser
+                FunctCancel={()=>SetCreateuser({display: 'none'})}
+                />
+            </div>
+
             <div className={styles.head_bar_cont}>
                 <div className={styles.text_div}>
                 <p className={styles.text1_}>Ticket Malawi</p>
@@ -166,6 +173,7 @@ function Home () {
                     <p onClick={CreateEvOn} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#255290"><path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></p>
                     <p onClick={insertPin}  className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#255290"><path d="M436.67-344 664-571.33l-47-46.34-178.33 178.34-95.34-95.34L295-486.33 436.67-344ZM480-80.67q-139.67-35-229.83-161.5Q160-368.67 160-520.67v-240l320-120 320 120v240q0 152-90.17 278.5Q619.67-115.67 480-80.67Zm0-69.33q111.33-36.33 182.33-139.67 71-103.33 71-231v-193.66L480-809.67l-253.33 95.34v193.66q0 127.67 71 231Q368.67-186.33 480-150Zm0-330Z"/></svg></p>
                     <p onClick={openConsole} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#255290"><path d="M319.33-246.67h321.34v-66.66H319.33v66.66Zm0-166.66h321.34V-480H319.33v66.67ZM226.67-80q-27 0-46.84-19.83Q160-119.67 160-146.67v-666.66q0-27 19.83-46.84Q199.67-880 226.67-880H574l226 226v507.33q0 27-19.83 46.84Q760.33-80 733.33-80H226.67Zm314-542.67v-190.66h-314v666.66h506.66v-476H540.67Zm-314-190.66v190.66-190.66 666.66-666.66Z"/></svg></p>
+                    <p onClick={()=>SetCreateuser({display: 'flex'})} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="M726.67-400v-126.67H600v-66.66h126.67V-720h66.66v126.67H920v66.66H793.33V-400h-66.66ZM360-480.67q-66 0-109.67-43.66Q206.67-568 206.67-634t43.66-109.67Q294-787.33 360-787.33t109.67 43.66Q513.33-700 513.33-634t-43.66 109.67Q426-480.67 360-480.67ZM40-160v-100q0-34.67 17.5-63.17T106.67-366q70.66-32.33 130.89-46.5 60.22-14.17 122.33-14.17T482-412.5q60 14.17 130.67 46.5 31.66 15 49.5 43.17Q680-294.67 680-260v100H40Zm66.67-66.67h506.66V-260q0-14.33-7.83-27t-20.83-19q-65.34-31-116.34-42.5T360-360q-57.33 0-108.67 11.5Q200-337 134.67-306q-13 6.33-20.5 19t-7.5 27v33.33ZM360-547.33q37 0 61.83-24.84Q446.67-597 446.67-634t-24.84-61.83Q397-720.67 360-720.67t-61.83 24.84Q273.33-671 273.33-634t24.84 61.83Q323-547.33 360-547.33Zm0-86.67Zm0 407.33Z"/></svg></p>
                     <p onClick={stateson}  style={stateon} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="M480-360 280-559.33h400L480-360Z"/></svg></p>
                     <p onClick={statesoff} style={States} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="m280-400 200-200.67L680-400H280Z"/></svg></p>
                 </div>
