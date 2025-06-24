@@ -1,68 +1,111 @@
-.main_cont{
-    text-align: center;
-    margin: 25% auto;
-    max-width: fit-content;
-    background-color: rgba(128, 128, 128, 0.068);
-    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.144);
-    padding: 2% 5%;
+.main_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin: 8% auto;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.12);
+}
+
+.main_txt {
+    font-size: 2em;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+.input_field {
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.9em 1em;
+    width: 100%;
+    margin: 0.7em 0;
+    border: 1.5px solid #bdbdbd;
+    border-radius: 7px;
+    background: #f5f7fa;
+    font-size: 1em;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.07);
+}
+.input_field:focus {
+    outline: none;
+    border: 1.5px solid #3949ab;
+    box-shadow: 0 0 0 2px #e3e7fd;
+    background: #fff;
+}
+
+.login_btn {
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
     border: none;
-    border-radius: 15px;
+    border-radius: 7px;
+    font-size: 1.1em;
+    margin: 1.2em 0 0.5em 0;
+    padding: 0.8em 0;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-.main_txt{
-    font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: blue;
+.login_btn:active {
+    background: #283593;
 }
-.input_field{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 2%;
-    width: 90%;
-    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.116);
-    border: none;
-    border-radius: 4px;
-    margin-top: 3%;
-}
-.login_btn{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.15em;
-    margin: 4% 0;
-    padding: 2% 15%;
-    transition-duration: 0.25s;
-}
-.login_btn:active{
-    background-color: rgb(112, 112, 112);
-}
-.login_btn:hover{
+.login_btn:hover {
     cursor: pointer;
-    background-color: white;
-    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.116);
-    color: blue;   
+    background: #fff;
+    color: #1976d2;
+    border: 1.5px solid #1976d2;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.13);
 }
-.link_txt{
+
+.link_txt {
     font-family: Arial, Helvetica, sans-serif;
-    color: grey;
+    color: #757575;
+    font-size: 0.98em;
+    margin-top: 0.5em;
+    text-decoration: underline;
+    transition: color 0.2s;
 }
-.link_txt:hover{
-    color: red;
+.link_txt:hover {
+    color: #d32f2f;
     cursor: pointer;
 }
-.link_txt:active{
-    color: blue;
+.link_txt:active {
+    color: #1976d2;
 }
-.cam_txt_btn{
+
+.cam_txt_btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: grey;
+    color: #616161;
 }
 
 input,
 textarea,
 select {
   font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    .main_cont {
+        max-width: 95vw;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .main_txt {
+        font-size: 1.3em;
+    }
+    .login_btn {
+        font-size: 1em;
+        padding: 0.7em 0;
+    }
 }
