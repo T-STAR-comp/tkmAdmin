@@ -42,6 +42,7 @@ const CreateUser = (props) => {
           Password: user.password,
           Type: user.type,
           Path: user.path,
+          admin_password: user.admin_password
         }),
       });
 
