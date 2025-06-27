@@ -7,7 +7,8 @@ const CreateUser = (props) => {
     email: '',
     password: '',
     type: '',
-    path: ''
+    path: '',
+    admin_password: ''
   });
   const [message, setMessage] = useState('');
 
@@ -101,6 +102,13 @@ const CreateUser = (props) => {
           name="password"
           placeholder="Enter User Password"
           value={user.password}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="admin_password"
+          placeholder="Enter Admin Password"
+          value={user.admin_password}
           onChange={handleChange}
         />
         <div className={styles.btn_group}>
