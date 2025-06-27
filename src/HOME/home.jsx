@@ -19,7 +19,7 @@ function Home () {
     const[stateon, setStateon] = useState({display:'flex'});
     const[console, Setconsole] = useState({display:'none'});
     const[loggingout, Setloggingout] = useState(false);
-    const[Createuser, SetCreateuser] = useState({display:'flex'});
+    const[Createuser, SetCreateuser] = useState({display:'none'});
     const handleChange = (e) => {
         const {value} = e.target;
         setPin(value);

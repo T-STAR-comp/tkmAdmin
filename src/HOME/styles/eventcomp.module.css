@@ -1,163 +1,189 @@
-.main_div{
+.main_event_cont_div {
+    margin: 2vw auto;
+    max-width: 900px;
+    animation: fadeIn 1.2s;
+}
+
+.main_div {
     display: flex;
     flex-direction: column;
-    padding: 20px 15px;
+    padding: 2.2em 2em 1.5em 2em;
     border: none;
-    border-radius: 8px;
-    background-color: rgb(33, 33, 92);
-    box-shadow: 0 0 4px 5px rgba(128, 128, 128, 0.26);
-    margin: 2%;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    margin: 2vw auto;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
-.text_holder_div{
+.main_div:hover {
+    box-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.18);
+    transform: translateY(-2px) scale(1.01);
+}
+
+.text_holder_div {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
 }
-.event_name{
-    font-size: 1.3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(223, 223, 223);
-    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.219);
-    font-weight: bolder;
-    margin-left: 3%;
-    margin-right: 3%;
+.event_name {
+    font-size: 1.5em;
+    font-family: 'SF Pro Display', 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    color: #1a237e;
+    font-weight: 700;
+    margin-left: 0;
+    margin-right: 1.5em;
+    letter-spacing: 0.5px;
 }
-.edit_event_btn{
-    font-size: 1.3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: blue;
+.edit_event_btn {
+    font-size: 1.1em;
+    font-family: inherit;
+    color: #1976d2;
     text-decoration: underline;
-    transition-duration: 0.12s;
-}
-.edit_event_btn:hover{
-    color: black;
-    text-decoration: none;
+    font-weight: 600;
     cursor: pointer;
+    transition: color 0.18s, text-decoration 0.18s;
 }
-.edit_event_btn:active{
-    color: white;
+.edit_event_btn:hover {
+    color: #d32f2f;
+    text-decoration: none;
+}
+.edit_event_btn:active {
+    color: #fff;
+    background: #1976d2;
+    border-radius: 6px;
 }
 
-
-
-.detailsl_main_cont{
+.detailsl_main_cont {
     display: flex;
     flex-direction: column;
-    background-color: grey;
-    padding: 1%;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 4px 5px rgba(255, 255, 255, 0.123);
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(31, 38, 135, 0.10);
+    padding: 2em 1.5em;
+    margin-top: 1.2em;
+    position: relative;
+    border: 1.5px solid rgba(255,255,255,0.25);
 }
-.manage_event_hd_txt{
-    font-size: 1.2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(216, 216, 216);
-    font-weight: bold;
-    text-wrap: nowrap;
+.manage_event_hd_txt {
+    font-size: 1.3em;
+    font-family: inherit;
+    color: #1976d2;
+    font-weight: 700;
+    margin-bottom: 1em;
+    letter-spacing: 0.5px;
 }
-.inactive_icon{
-    width: fit-content;
-    position: absolute;
-    right: 25%;
+.inactive_icon, .active_icon, .status_check, .close_svg {
+    display: inline-block;
+    margin-right: 1em;
     cursor: pointer;
+    transition: transform 0.18s;
+    position: static;
 }
-.inactive_icon:active{
+.inactive_icon:active, .active_icon:active {
     transform: scale(1.1);
 }
-.active_icon{
-    width: fit-content;
-    position: absolute;
-    right: 20%;
-    cursor: pointer;
+.status_check {
+    margin-right: 0;
 }
-.active_icon:active{
-    transform: scale(1.1);
+.close_svg {
+    float: right;
+    margin-left: auto;
+    margin-top: -2.5em;
 }
-.status_check{
-    width: fit-content;
-    position: absolute;
-    right: 15%;
-}
-.close_svg{
-    margin-left: 95%;
-    margin-top: -3.5%;
-    cursor: pointer;
-}
-.manage_event_main{
+.manage_event_main {
     display: flex;
     flex-direction: row;
+    gap: 2em;
+    margin-top: 1.5em;
 }
-.manage_ev_left_div{
-    background-color: rgba(180, 180, 180, 0.288);
-    backdrop-filter: blur(18px);
-    padding: 2%;
-    width: 35vh;
+.manage_ev_left_div {
+    background: rgba(240, 244, 255, 0.45);
+    backdrop-filter: blur(10px);
+    padding: 1.5em 1em;
+    width: 220px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(31, 38, 135, 0.07);
+}
+img {
     border-radius: 10px;
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 1em;
 }
-img{
-    border-radius: 10px;
+.manage_ev_date {
+    font-size: 1.1em;
+    font-family: inherit;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 0.7em;
 }
-.manage_ev_date{
-    font-size: 1.3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: rgb(206, 206, 206);
-    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.541);
-}
-.settings_icon{
-    margin-left: 4%;
-    margin-top: 5%;
+.settings_icon {
+    margin-top: 1em;
     cursor: pointer;
     width: fit-content;
-    transition-duration: 0.22s;
+    transition: transform 0.18s;
 }
-.settings_icon:hover{
+.settings_icon:hover {
     transform: scale(1.2);
 }
 
-.manage_ev_right_div{
+.manage_ev_right_div {
     display: flex;
     flex-direction: column;
-    background-color: rgba(180, 180, 180, 0.288);
-    backdrop-filter: blur(18px);
-    padding: 0 1%;
-    margin-left: 4%;
-    border-radius: 10px;
-    width: 120vh;
+    background: rgba(240, 244, 255, 0.45);
+    backdrop-filter: blur(10px);
+    padding: 1.5em 1em;
+    border-radius: 14px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(31, 38, 135, 0.07);
 }
-.fincnial_div_hd_txt{
+.fincnial_div_hd_txt {
     text-align: center;
-    font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: rgb(211, 211, 211);
+    font-size: 1.2em;
+    font-family: inherit;
+    font-weight: 700;
+    color: #1976d2;
+    margin-bottom: 1em;
 }
-.total_txts{
+.total_txts {
     display: flex;
-    flex: row;
-    font-size: 1.6em;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1em;
     font-family: monospace;
-    font-weight: bold;
-    color: rgb(230, 230, 230);
-    margin-left: 5%;
-    background-color: rgba(179, 179, 179, 0.116);
+    font-weight: 600;
+    color: #222b45;
+    margin: 0.5em 0;
+    background: rgba(255,255,255,0.7);
     box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.034);
-    text-wrap: nowrap;
-    width: 80%;
-    padding: 2%;
-    border-radius: 10px;
+    width: 90%;
+    padding: 0.7em 1em;
+    border-radius: 8px;
 }
-.green_txt{
-    color: rgb(0, 226, 0);
+.green_txt {
+    color: #43a047;
     margin-left: 7px;
     margin-top: 0;
 }
-.download_icon{
-    margin-left: 4%;
-    margin-top: -6%;
+.download_icon {
+    margin-left: 0.5em;
+    margin-top: 0;
     cursor: pointer;
     width: fit-content;
-    transition-duration: 0.22s;
+    transition: transform 0.18s;
+}
+.download_icon:hover {
+    transform: scale(1.2);
 }
 .loader {
     display: flex;
@@ -177,20 +203,17 @@ img{
     width: 43px;
     height: 43px;
     margin: 1px;
-    background-color: blue;
+    background-color: #1976d2;
     border-radius: 50%;
     display: inline-block;
     animation: bounce 1.4s infinite ease-in-out both;
 }
-
 .loader div:nth-child(1) {
     animation-delay: -0.32s;
 }
-
 .loader div:nth-child(2) {
     animation-delay: -0.16s;
 }
-
 @keyframes bounce {
     0%, 80%, 100% {
         transform: scale(0);
@@ -199,12 +222,25 @@ img{
         transform: scale(1.0);
     }
 }
-.editpencil{
-    cursor: pointer;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-.close_editmode{
-    display: flex;
-    z-index: 999;
-    cursor: pointer;
-    max-width: fit-content;
+@media (max-width: 900px) {
+    .main_event_cont_div, .main_div {
+        max-width: 99vw;
+        padding: 1.2em 0.5em 1.5em 0.5em;
+    }
+    .manage_event_main {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .manage_ev_left_div, .manage_ev_right_div {
+        width: 100%;
+        max-width: 98vw;
+        padding: 1em 0.5em;
+    }
+    img {
+        max-width: 98vw;
+    }
 }

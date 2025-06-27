@@ -1,56 +1,70 @@
-.main_cont{
+.main_cont {
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    padding: 2.5em 2em 2em 2em;
+    max-width: 400px;
+    margin: 10vw auto;
+    animation: fadeIn 1.2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 100%;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    backdrop-filter: blur(18px);
-    animation: mainCont ease-in 0.4s;
 }
-@keyframes mainCont {
-    0%{
-        backdrop-filter: blur(0);
-    }
-    100%{
-        backdrop-filter: blur(18px);
-    }
+.query_ {
+    font-size: 1.25em;
+    color: #222b45;
+    font-weight: 700;
+    margin-bottom: 2em;
+    letter-spacing: 0.5px;
 }
-.container{
-    background-color: rgba(128, 128, 128, 0.315);
-    padding: 2%;
-    border-radius: 10px;
-    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.178);
-    animation: inContainer ease-in 0.99s;
+.btns_main_div {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
 }
-@keyframes inContainer {
-    0%{
-        margin-top: -100%;
-    }
-    100%{
-        margin-top: 0;
-    }
-}
-.query_{
-    margin-top: 15%;
-    font-size: 1.2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-}
-.logOut_btns{
-    margin-left: 4%;
+.logOut_btns {
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.144);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 1% 2%;
+    border-radius: 7px;
+    font-size: 1em;
+    padding: 0.7em 2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.logOut_btns:hover {
+    background: #fff;
+    color: #1976d2;
+    border: 1.5px solid #1976d2;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.13);
+    transform: translateY(-2px) scale(1.03);
     cursor: pointer;
-    transition-duration: 0.22s;
 }
-.logOut_btns:hover{
-    background-color: blue;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-.logOut_btns:active{
-    background-color: rgb(146, 146, 255);
+@media (max-width: 500px) {
+    .main_cont {
+        padding: 1.2em 0.5em 1.5em 0.5em;
+        max-width: 95vw;
+    }
+    .query_ {
+        font-size: 1em;
+    }
+    .logOut_btns {
+        font-size: 0.95em;
+        padding: 0.7em 1em;
+    }
 }

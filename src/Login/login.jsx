@@ -23,10 +23,8 @@ function Login() {
         setSelectedOption(event.target.value);
     };
 
-
     //function to send data to server for validation
     const sendData = async () =>{
-
         const input_data = {
             ptncode: ptnCode,
             password:password,
@@ -46,7 +44,6 @@ function Login() {
             }
             const data = await response.json();
 
-            
             if(data.response === 'success'){
                 SetLogged(true);
                 
@@ -73,38 +70,43 @@ function Login() {
 
     if(Logged === true){
         return(
-            <div>
-                <p>Login Successful.......</p>
+            <div className={styles.login_success_cont}>
+                <p className={styles.login_success_txt}>Login Successful.......</p>
             </div>
         );
     }
 
     return (
-        <div className={styles.main_cont}>
-            <p className={styles.main_txt}>ADMIN LOGIN</p>
-            <input
-                className={styles.input_field}
-                type="password"
-                placeholder="Enter PTN Code"
-                minLength="0"
-                maxLength="5"
-                required
-                value={ptnCode}
-                onChange={handlePtnCodeChange}
-            />
-            <input
-                className={styles.input_field}
-                type="password"
-                placeholder="Enter Password"
-                required
-                minLength="0"
-                value={password}
-                onChange={handlePasswordChange}
-            />
-
-            <button className={styles.login_btn} onClick={sendData} >Login</button>
-            
-            <Outlet/>
+        <div className={styles.login_bg}>
+            <div className={styles.main_cont}>
+                <div className={styles.logo_circle}>
+                    {/* Artistic logo/icon placeholder */}
+                    <span className={styles.logo_icon}>🎟️</span>
+                </div>
+                <p className={styles.main_txt}>ADMIN LOGIN</p>
+                <p className={styles.subtitle}>Welcome back! Please sign in to continue.</p>
+                <input
+                    className={styles.input_field}
+                    type="password"
+                    placeholder="Enter PTN Code"
+                    minLength="0"
+                    maxLength="5"
+                    required
+                    value={ptnCode}
+                    onChange={handlePtnCodeChange}
+                />
+                <input
+                    className={styles.input_field}
+                    type="password"
+                    placeholder="Enter Password"
+                    required
+                    minLength="0"
+                    value={password}
+                    onChange={handlePasswordChange}
+                />
+                <button className={styles.login_btn} onClick={sendData} >Login</button>
+                <Outlet/>
+            </div>
         </div>
     );   
 }
