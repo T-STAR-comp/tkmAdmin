@@ -6,6 +6,7 @@ import CreateEvent from './createEvent.jsx';
 import State from './state.jsx';
 import Console from './console.jsx';
 import CreateUser from './createUser.jsx';
+import ViewUsers from './viewUsers.jsx';
 import url from '../URL/url.js';
 
 function Home () {
@@ -20,6 +21,7 @@ function Home () {
     const[console, Setconsole] = useState({display:'none'});
     const[loggingout, Setloggingout] = useState(false);
     const[Createuser, SetCreateuser] = useState({display:'none'});
+    const[ViewUsersOpen, setViewUsersOpen] = useState(false);
     const handleChange = (e) => {
         const {value} = e.target;
         setPin(value);
@@ -158,6 +160,12 @@ function Home () {
                 />
             </div>
 
+            {ViewUsersOpen && (
+                <div className={styles.Extra_divs}>
+                    <ViewUsers FunctCancel={() => setViewUsersOpen(false)} />
+                </div>
+            )}
+
             <div className={styles.head_bar_cont}>
                 <div className={styles.text_div}>
                 <p className={styles.text1_}>Ticket Malawi</p>
@@ -176,6 +184,9 @@ function Home () {
                     <p onClick={()=>SetCreateuser({display: 'flex'})} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="M726.67-400v-126.67H600v-66.66h126.67V-720h66.66v126.67H920v66.66H793.33V-400h-66.66ZM360-480.67q-66 0-109.67-43.66Q206.67-568 206.67-634t43.66-109.67Q294-787.33 360-787.33t109.67 43.66Q513.33-700 513.33-634t-43.66 109.67Q426-480.67 360-480.67ZM40-160v-100q0-34.67 17.5-63.17T106.67-366q70.66-32.33 130.89-46.5 60.22-14.17 122.33-14.17T482-412.5q60 14.17 130.67 46.5 31.66 15 49.5 43.17Q680-294.67 680-260v100H40Zm66.67-66.67h506.66V-260q0-14.33-7.83-27t-20.83-19q-65.34-31-116.34-42.5T360-360q-57.33 0-108.67 11.5Q200-337 134.67-306q-13 6.33-20.5 19t-7.5 27v33.33ZM360-547.33q37 0 61.83-24.84Q446.67-597 446.67-634t-24.84-61.83Q397-720.67 360-720.67t-61.83 24.84Q273.33-671 273.33-634t24.84 61.83Q323-547.33 360-547.33Zm0-86.67Zm0 407.33Z"/></svg></p>
                     <p onClick={stateson}  style={stateon} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="M480-360 280-559.33h400L480-360Z"/></svg></p>
                     <p onClick={statesoff} style={States} className={styles.header_icons}><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="m280-400 200-200.67L680-400H280Z"/></svg></p>
+                    <p onClick={() => setViewUsersOpen(true)} className={styles.header_icons}>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#255290"><path d="M640-402q-50.67 0-84.67-34t-34-84.67q0-50.66 34-84.66t84.67-34q50.67 0 84.67 34t34 84.66q0 50.67-34 84.67T640-402ZM400-160v-69.33q0-19.58 9.33-37.29 9.34-17.71 25.34-26.05 45-30.33 97.5-45.16 52.5-14.84 107.83-14.84t107.5 15.84q52.17 15.83 97.83 44.16 15.34 10.34 25 27Q880-249 880-229.33V-160H400Zm65.33-74v7.33h349.34V-234Q777-258 730-272t-90-14q-43 0-90.33 14-47.34 14-84.34 38ZM640-468.67q23 0 37.5-14.5t14.5-37.5q0-23-14.5-37.5t-37.5-14.5q-23 0-37.5 14.5t-14.5 37.5q0 23 14.5 37.5t37.5 14.5Zm0-52Zm0 294Zm-520-180v-66.66h310.67v66.66H120Zm0-326.66V-800h475.33v66.67H120ZM460.67-570H120v-66.67h373.33q-12 14.34-19.98 30.95-7.99 16.61-12.68 35.72Z"/></svg>
+                    </p>
                 </div>
             </div>
 

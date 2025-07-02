@@ -50,14 +50,14 @@ const CreateUser = (props) => {
       console.log(data)
 
       data.error ? setMessage(data.error) : setMessage(data.message);
-      setUser({ Name: '', email: '', password: '', type: '', path: '' });
+      setUser({ Name: '', email: '', password: '', type: '', path: '', admin_password: '' });
     } catch (err) {
       setMessage('An error occurred unexpectedly.');
     }
   };
 
   const handleCancel = () => {
-    setUser({ Name: '', email: '', password: '', type: '', path: '' });
+    setUser({ Name: '', email: '', password: '', type: '', path: '', admin_password: ''  });
     setMessage('');
     props.FunctCancel?.();
   };
