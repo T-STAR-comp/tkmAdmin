@@ -60,6 +60,7 @@ const ViewUsers = (props) => {
             <thead>
               <tr>
                 <th>Username</th>
+                <th>Email</th>
                 <th>Type</th>
                 <th>Path</th>
                 <th>Status</th>
@@ -71,6 +72,7 @@ const ViewUsers = (props) => {
                 users.map((user, idx) => (
                   <tr key={user.id || idx}>
                     <td>{user.username}</td>
+                    <td>{user.email || user.Email}</td>
                     <td>{user.type}</td>
                     <td>{user.path}</td>
                     <td>{user.status}</td>
@@ -94,7 +96,7 @@ const ViewUsers = (props) => {
                   </tr>
                 ))
               ) : (
-                <tr><td colSpan={5}>No users found.</td></tr>
+                <tr><td colSpan={6}>No users found.</td></tr>
               )}
             </tbody>
           </table>
